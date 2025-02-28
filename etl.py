@@ -2,7 +2,6 @@ import boto3
 import pandas as pd
 from io import StringIO
 from sqlalchemy import create_engine
-
 # Configuration MinIO (S3 local)
 MINIO_ENDPOINT = "http://localhost:9000"
 MINIO_ACCESS_KEY = "minioadmin"
@@ -11,11 +10,11 @@ BUCKET_NAME = "poorman-datalake"
 FILE_KEY = "submissions.csv"
 
 # Connexion à PostgreSQL (remplacez par vos identifiants)
-DATABASE_URI = "postgresql+psycopg2://username:password@localhost:5432/music_dw"
+DATABASE_URI = "postgresql+psycopg2://postgres:root@localhost:5434/music_dw"
 engine = create_engine(DATABASE_URI)
 
 # Étape 1 : Extraction des données depuis MinIO (S3 local)
-print("Extraction des données depuis MinIO...")
+print("Extraction des données depuis MinIO dans le plus grand des calme ...")
 s3_client = boto3.client(
     's3',
     endpoint_url=MINIO_ENDPOINT,
@@ -31,12 +30,13 @@ print("Données brutes extraites :")
 print(df)
 
 # Étape 2 : Transformation des données (garder uniquement 'submit')
-print("\nTransformation des données...")
+print("\nTransformation des données lock des données de commandes currateurs ...")
 df_transformed = df[df['submission_status'] == 'submit']
 print("Données transformées :")
 print(df_transformed)
 
 # Étape 3 : Chargement dans PostgreSQL
-print("\nChargement des données dans PostgreSQL...")
+print("\nChargement des données dans PostgreSQL ❤️...")
 df_transformed.to_sql('submissions', engine, if_exists='append', index=False)
 print("Chargement terminé avec succès.")
+
