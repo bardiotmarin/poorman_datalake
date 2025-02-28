@@ -3,3 +3,8 @@ submission_date,artist_name,track_title,genre,submission_status,email,token_pric
 2025-04-02,Artiste B,Chanson 2,Pop,submit,artisteB@example.com,12
 2025-04-03,Artiste C,Chanson 3,Indie,rejected,artisteC@example.com,14
 2025-04-04,Artiste D,Chanson 4,Electro,submit,artisteD@example.com,57
+2025-04-03,Artiste E,Chanson 5,Indie,rejected,artisteC@example.com,1
+2025-04-03,Artiste F,Chanson 6,Indie,rejected,artisteC@example.com,140
+2025-04-03,Artiste G,Chanson 7,Indie,rejected,artisteC@example.com,130
+2025-04-03,Artiste H,Chanson 8,Indie,submit,artist@exouple.fr,5002
+
